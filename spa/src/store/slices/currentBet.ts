@@ -10,11 +10,14 @@ const currentBet = createSlice({
   name: "currentBet",
   initialState,
   reducers: {
+    setBetValue(state, action: PayloadAction<number>) {
+      state.value = action.payload;
+    },
     changeByAmount(state, action: PayloadAction<number>) {
       state.value += action.payload;
     },
   },
 });
 
-export const { changeByAmount } = currentBet.actions;
+export const { setBetValue, changeByAmount } = currentBet.actions;
 export default currentBet.reducer;
