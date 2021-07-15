@@ -12,7 +12,7 @@ const game = createSlice({
   initialState,
   reducers: {
     setWinSector(state, action: PayloadAction<string>) {
-      state.winSector += action.payload;
+      state.winSector = action.payload;
     },
   },
 });

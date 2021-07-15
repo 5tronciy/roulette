@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { changeByAmount, setBetValue } from "../../store/slices/currentBet";
+import { setWinSector } from "../../store/slices/game";
 import { RootState } from "../../store/store";
+import { random } from "../../utils";
 import s from "./style.module.css";
 
 export const ButtonsBar = () => {
@@ -44,7 +46,10 @@ export const ButtonsBar = () => {
     }
   };
 
-  const spin = () => {};
+  const spin = () => {
+    const winSector = random().toString();
+    dispatch(setWinSector(winSector));
+  };
 
   return (
     <div className={s.wrapper}>
