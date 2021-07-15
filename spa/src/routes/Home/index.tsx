@@ -11,7 +11,7 @@ export const Home = () => {
       <div className={s.content}>
         <h1>betbetbet</h1>
         <h2>roulette</h2>
-        <Link to="/roulette" target="_blank" rel="noopener noreferrer">
+        <Link to="/roulette" rel="noopener noreferrer">
           Play
         </Link>
       </div>

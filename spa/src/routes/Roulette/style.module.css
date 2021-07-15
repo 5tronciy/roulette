@@ -1,4 +1,12 @@
-.canvas {
-  height: 800px;
-  width: 800px;
+.wrapper {
+  display: grid;
+  background: #10210e;
+  position: relative;
+  grid-template-areas:
+    "gameboard roulette"
+    "gameboard buttonsBar";
+  grid-template-rows: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  height: 100vh;
 }

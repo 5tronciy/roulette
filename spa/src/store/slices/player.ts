@@ -6,7 +6,11 @@ interface playerState {
   stack: number;
 }
 
-const initialState = { id: "", name: "", stack: 0 } as playerState;
+const initialState = {
+  id: "1",
+  name: "m0neymaker",
+  stack: 1000,
+} as playerState;
 
 const player = createSlice({
   name: "player",
