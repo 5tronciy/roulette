@@ -1,3 +1,83 @@
 .wrapper {
   grid-area: gameboard;
 }
+
+.table {
+  display: grid;
+  grid-template-rows: repeat(14, 50px);
+  grid-template-columns: 1fr 1fr 1.5fr 1.5fr 1.5fr;
+}
+
+.zero {
+  grid-column-start: 3;
+  grid-column-end: 3 span;
+  height: 50px;
+}
+
+.sectors {
+  grid-area: 2 / 3 / span 12 / span 3;
+  display: grid;
+  grid-template-rows: repeat(12, 50px);
+  grid-template-columns: 1.5fr 1.5fr 1.5fr;
+}
+
+.half {
+  grid-row-end: 2 span;
+  grid-column-start: 1;
+}
+
+.first12 {
+  grid-row-start: 2;
+  grid-row-end: 4 span;
+  grid-column-start: 2;
+}
+
+.second12 {
+  grid-row-start: 6;
+  grid-row-end: 4 span;
+  grid-column-start: 2;
+}
+
+.third12 {
+  grid-row-start: 10;
+  grid-row-end: 4 span;
+  grid-column-start: 2;
+}
+
+.firstColumn {
+  grid-column-start: 3;
+  grid-row-start: 14;
+}
+
+.secondColumn {
+  grid-column-start: 4;
+  grid-row-start: 14;
+}
+
+.thirdColumn {
+  grid-column-start: 5;
+  grid-row-start: 14;
+}
+
+.red,
+.black,
+.zero,
+.half,
+.first12,
+.second12,
+.third12,
+.firstColumn,
+.secondColumn,
+.thirdColumn {
+  border: solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.half,
+.first12,
+.second12,
+.third12 {
+  writing-mode: vertical-rl;
+}
